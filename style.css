@@ -81,12 +81,12 @@ body::after{
 }
 
 .container form input:hover{
-    border: 1px solid #675afe;
+    border: transparent #b0abdf;
 }
 
 .container form input:focus{
     padding: 0 14px;
-    border: 1px solid #4a41a7;
+    border: transparent #706d94;
 }
 
 .container form .convert-box{
