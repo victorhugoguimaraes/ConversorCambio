@@ -1,6 +1,4 @@
-#Conversor de Moedas 
-
-##É um redesign de um Conversor de Moedas
+#CONVERSOR DE MOEDAS
 ## Ferramentas utilizadas para o redesign
 - HTML
 - JAVASCRIPT
