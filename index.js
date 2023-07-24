@@ -4,9 +4,6 @@ const getBtn = document.querySelector("form button");
 const exIcon = document.querySelector("form .reverse");
 const amount = document.querySelector("form input");
 const exRateTxt = document.querySelector("form .result");
-
-// Event listener for currency dropdowns (select)
-
 [fromCur, toCur].forEach((select, i) => {
     for (let curCode in Country_List) {
         const selected = (i === 0 && curCode === "USD") || (i === 1 && curCode === "GBP") ? "selected" : "";
@@ -18,11 +15,8 @@ const exRateTxt = document.querySelector("form .result");
         imgTag.src = `https://flagcdn.com/48x36/${Country_List[code].toLowerCase()}.png`;
     });
 });
-
-// Function to get exchange rate from api
-
 async function getExchangeRate() {
-    const amountVal = amount.value || 1;
+    const amountVal = amount.value.replace(",",".") || 1;
     exRateTxt.innerText = "Convertendo a moeda...";
     try {
         const response = await fetch(`https://v6.exchangerate-api.com/v6/e9d062aaa07672c2e2e9c3c1/latest/${fromCur.value}`);
@@ -34,15 +28,11 @@ async function getExchangeRate() {
         exRateTxt.innerText = "Erro na conversão";
     }
 }
-
-// Event listeners for button and exchange icon click
-
 window.addEventListener("load", getExchangeRate);
 getBtn.addEventListener("click", (e) => {
     e.preventDefault();
     getExchangeRate();
 });
-
 exIcon.addEventListener("click", () => {
     [fromCur.value, toCur.value] = [toCur.value, fromCur.value];
     [fromCur, toCur].forEach((select) => {
