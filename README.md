@@ -7,4 +7,3 @@
 
 
 
-  <img alt="PrintSite" title="#PrintSite" src="./siteprint.png" />
