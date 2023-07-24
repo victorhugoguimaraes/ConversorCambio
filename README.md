@@ -1,6 +1,6 @@
 # CONVERSOR DE MOEDAS
 
- Ferramentas utilizadas para o redesign
+ Ferramentas utilizadas para o redesign do site: 
 - HTML
 - JAVASCRIPT
 - CSS
